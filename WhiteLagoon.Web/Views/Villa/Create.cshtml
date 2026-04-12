@@ -12,7 +12,7 @@
 </div>
 
 <div class="card-body border p-4">
-	<form asp-action="Create" method="post" class="row">
+	<form asp-action="Create" method="post" class="row" enctype="multipart/form-data">
 		<div class="p-3">
 			<label asp-for="Name" class="form-label"></label>
 			<input asp-for="Name" class="form-control" />
@@ -40,7 +40,8 @@
 		</div>
 		<div class="p-3">
 			<label asp-for="ImageUrl" class="form-label"></label>
-			<input asp-for="ImageUrl" class="form-control" />
+			<input asp-for="ImageUrl" hidden class="form-control" />
+			<input asp-for="Image" class="form-control" />
 			<span asp-validation-for="ImageUrl" class="text-danger"></span>
 		</div>
 

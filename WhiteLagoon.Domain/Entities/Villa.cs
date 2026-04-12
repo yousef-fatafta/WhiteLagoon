@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace WhiteLagoon.Domain.Entities
@@ -12,6 +14,8 @@ namespace WhiteLagoon.Domain.Entities
         public string? Description { get; set; }
         [Display(Name = "Price Per Night")]
         public double Price { get; set; }
+        [NotMapped]
+        public IFormFile? Image { get; set; }
         public int Sqft { get; set; }
         public int Occupancy { get; set; }
         [Display(Name = "Image URL")]
