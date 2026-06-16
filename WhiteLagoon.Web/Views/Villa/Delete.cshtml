@@ -14,29 +14,36 @@
 <div class="card-body border p-4">
 	<form asp-action="Delete" method="post" class="row">
 		<input type="hidden" asp-for="Id" />
-		<div class="p-3">
-			<label asp-for="Name" class="form-label"></label>
-			<input asp-for="Name" disabled class="form-control" />
+		<div class="col-10">
+			<div class="p-3">
+				<label asp-for="Name" class="form-label"></label>
+				<input asp-for="Name" disabled class="form-control" />
+			</div>
+			<div class="p-3">
+				<label asp-for="Description" class="form-label"></label>
+				<input asp-for="Description" disabled class="form-control" />
+			</div>
+			<div class="p-3">
+				<label asp-for="Price" class="form-label"></label>
+				<input asp-for="Price" disabled class="form-control" />
+			</div>
+			<div class="p-3">
+				<label asp-for="Sqft" class="form-label"></label>
+				<input asp-for="Sqft" disabled class="form-control" />
+			</div>
+			<div class="p-3">
+				<label asp-for="Occupancy" class="form-label"></label>
+				<input asp-for="Occupancy" disabled class="form-control" />
+			</div>
+			<div class="p-3">
+				<label asp-for="ImageUrl" class="form-label"></label>
+				<input asp-for="ImageUrl" disabled class="form-control" />
+			</div>
 		</div>
-		<div class="p-3">
-			<label asp-for="Description" class="form-label"></label>
-			<input asp-for="Description" disabled class="form-control" />
-		</div>
-		<div class="p-3">
-			<label asp-for="Price" class="form-label"></label>
-			<input asp-for="Price" disabled class="form-control" />
-		</div>
-		<div class="p-3">
-			<label asp-for="Sqft" class="form-label"></label>
-			<input asp-for="Sqft" disabled class="form-control" />
-		</div>
-		<div class="p-3">
-			<label asp-for="Occupancy" class="form-label"></label>
-			<input asp-for="Occupancy" disabled class="form-control" />
-		</div>
-		<div class="p-3">
-			<label asp-for="ImageUrl" class="form-label"></label>
-			<input asp-for="ImageUrl" disabled class="form-control" />
+
+		<div class="col-2">
+			<img src="@Model.ImageUrl" width="100%"
+				 style="border-radius: 5px; border: 1px solid #bbb9b9" />
 		</div>
 
 		<div class="row pt-2">
